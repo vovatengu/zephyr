@@ -137,7 +137,7 @@ class Stream:
         Returns:
             None
         """
-        pipe = sp.Popen(self.command, stdin=sp.PIPE, stderr=sp.PIPE)
+        pipe = sp.Popen(self.command, stdin=sp.PIPE, stderr=sp.DEVNULL)
         run = True
 
         while run:
