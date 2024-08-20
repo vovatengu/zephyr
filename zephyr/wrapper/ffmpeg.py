@@ -2,6 +2,9 @@ class FFMPEG:
     def __init__(self):
         self.command_args = ["ffmpeg"]
 
+    def nobuffer(self):
+        self.command_args.extend(["-fflags", "nobuffer"])
+
     def read(self):
         self.command_args.append("-re")
         return self

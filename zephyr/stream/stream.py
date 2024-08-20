@@ -89,6 +89,7 @@ class Stream:
         self.wait = wait
         self.command = (
             FFMPEG()
+            .nobuffer()
             .read()
             .overwrite()
             .video_format(video_format.RAW_VIDEO)
