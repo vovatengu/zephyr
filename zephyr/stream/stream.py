@@ -90,6 +90,8 @@ class Stream:
         self.command = (
             FFMPEG()
             .nobuffer()
+            .latency()
+            .pes_length()
             .read()
             .overwrite()
             .video_format(video_format.RAW_VIDEO)
