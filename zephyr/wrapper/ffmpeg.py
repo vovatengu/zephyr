@@ -9,11 +9,7 @@ class FFMPEG:
     def latency(self):
         self.command_args.extend(["-tune", "zero_latency"])
         return self
-   
-    def pes_length(self):
-        self.command_args.extend(["-omit_video_pes_length", "1"])
-        return self
-    
+
     def read(self):
         self.command_args.append("-re")
         return self
